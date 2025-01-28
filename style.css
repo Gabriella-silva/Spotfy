@@ -35,3 +35,14 @@ body{
     margin-top: 20px;
     padding: 0 20px 10px 20px;
 }
+.sidebar ul li{
+    padding: 10px 0;
+}
+
+.sidebar nav ul li a {
+    color: #b3b3b3;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    font-family: "DM Sans", sans-serif;
+}
