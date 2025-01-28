@@ -19,7 +19,19 @@ body{
 
 }
 
-.logo img {
+.sidebar_navigation .logo img {
     width: 80px;
-    
+
+}
+
+.sidebar_navigation .logo{
+    background-color: #121212;
+    display: flex;
+    border-radius: 16px;
+    padding: 16px 0 0 16px ;
+}
+
+.sidebar nav ul{
+    margin-top: 20px;
+    padding: 0 20px 10px 20px;
 }
