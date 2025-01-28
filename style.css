@@ -2,18 +2,19 @@ body{
     background-color: black;
 }
 
-h1{
-    color: #c74b4b;
+.sidebar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    padding: 12px;
+    
 }
-
 
 
 .sidebar_navigation{
      background-color: #121212 ;
      border-radius: 8px;
      padding: 16px 0 0 16px;
-     
-
-
 
 }
