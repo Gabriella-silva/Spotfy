@@ -46,3 +46,9 @@ body{
     font-size: 14px;
     font-family: "DM Sans", sans-serif;
 }
+
+library{
+    background-color: #121212;
+    border-radius: 8px;
+    display: flex;
+}
