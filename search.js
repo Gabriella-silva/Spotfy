@@ -7,17 +7,27 @@ function requestApi(searchTerm) {
     .then((response) => response.json())
     .then((results) => displayResults(results));
 }
+function displayResults(result) {
+    resultPlaylist.classList.add("hidden");
+    const artistList = document.getElementById('artist-list');
 
-function displayResults(results) {
-  hidePlaylists();
-  const artistImage = document.getElementById("artist-img");
-  const artistName = document.getElementById("artist-name");
+    // Limpa resultados anteriores
+    artistList.innerHTML = '';
 
-  results.forEach((element) => {
-    artistImage.src = element.urlImg;
-    artistName.innerText = element.name;
-  });
-  resultArtist.classList.remove("hidden");
+    if (result.length > 0) {
+        result.forEach(element => {
+            const artistDiv = document.createElement('div');
+            artistDiv.innerHTML = `
+                <p>${element.name}</p>
+                <img src="${element.urlImg}" alt="${element.name}">
+            `;
+            artistList.appendChild(artistDiv);
+        });
+        resultArtist.classList.remove('hidden');
+    } else {
+        resultArtist.classList.add('hidden');
+        resultPlaylist.classList.remove('hidden');
+    }
 }
 
 function hidePlaylists() {
